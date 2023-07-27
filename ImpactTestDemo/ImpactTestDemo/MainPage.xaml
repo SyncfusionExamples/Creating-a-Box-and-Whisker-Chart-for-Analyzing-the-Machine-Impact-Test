@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:model="clr-namespace:ImpactTestDemo"
+             x:Class="ImpactTestDemo.MainPage">
+
+
+
+    <ContentPage.BindingContext>
+        <model:ImpactTestViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <chart:SfCartesianChart >
+            <chart:SfCartesianChart.Title>
+                <Label Text="Creating a Box and Whisker Chart for analysis the machines impact test"
+                           HorizontalTextAlignment="Center"
+                           LineBreakMode="WordWrap"
+                           TextColor="Black" 
+                           FontSize="17"
+                           FontAttributes="Bold"
+                           Margin="10"/>
+            </chart:SfCartesianChart.Title>
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:CategoryAxis ShowMajorGridLines="False">
+                    <chart:CategoryAxis.Title>
+                        <chart:ChartAxisTitle Text="Machine" TextColor="Black"/>
+                    </chart:CategoryAxis.Title>
+                    <chart:CategoryAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle TextColor="Black"/>
+                    </chart:CategoryAxis.LabelStyle>
+                </chart:CategoryAxis>
+            </chart:SfCartesianChart.XAxes>
+
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis Interval="2" Maximum="80" ShowMajorGridLines="False">
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Energy Absorption Values"
+                                                  TextColor="Black"/>
+                    </chart:NumericalAxis.Title>
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle TextColor="Black"/>
+                    </chart:NumericalAxis.LabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+
+            <!--Initialize the series for chart-->
+            <chart:BoxAndWhiskerSeries ItemsSource="{Binding ImpactTestResults}"
+                                       XBindingPath="Machine"
+                                       YBindingPath="EnergyAbsorptionValues"
+                                       ShowMedian="True"
+                                       Stroke="Black"
+                                       StrokeWidth="2"
+                                       ShowDataLabels="True"
+                                       EnableTooltip="True"
+                                       EnableAnimation="True"
+                                       PaletteBrushes="{Binding CustomBrushes}">
+            </chart:BoxAndWhiskerSeries>
+        </chart:SfCartesianChart>
+        
+    </ContentPage.Content>
+</ContentPage>
