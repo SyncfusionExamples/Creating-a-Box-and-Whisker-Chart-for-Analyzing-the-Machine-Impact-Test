@@ -20,53 +20,15 @@ namespace ImpactTestDemo
                 new ImpactTestModel(1, new List<double> { 67.4,65.5,72.0,73.6,65.2,67.0,66.3,67.9,65.8,69.9,64.5,66.0,66.8,67.0,69.9,70.1,69.7,68.3,67.0,68.2,65.0,66.6,65.4,68.1 }),
                 new ImpactTestModel(2, new List<double> { 69.0,66.2,70.0,68.5,66.0,67.5,68.5,66.5,73.0,69.0,69.0,74.5,68.0,68.5,67.5,70.0,69.0,72.5,68.0,69.0,69.0,71.0,68.0,75.0,67.0 }),
                 new ImpactTestModel(3, new List<double> { 73.0,78.9,75.0,72.3,72.4,74.1,72.0,70.9,74.5,72.0,72.5,72.4,74.0,75.0,70.9,70.9,76.6,74.2,69.5,68.8,68.5,70.1,73.0,70.9 }),
-                new ImpactTestModel(4, new List<double> { 67.6,64.2,65.9,65.9,68.2,71.1,67.6,71.6,72.8,68.2,67.6,67.1,67.1,68.2,65.4,66.5,67.6,67.1,71.1,67.1,65.4,67.6,67.6,70.5,70.5 }),
-                  
-                
+                new ImpactTestModel(4, new List<double> { 67.6,64.2,65.9,65.9,68.2,71.1,67.6,71.6,72.8,68.2,67.6,67.1,67.1,68.2,65.4,66.5,67.6,67.1,71.1,67.1,65.4,67.6,67.6,70.5,70.5 }),  
             };
 
             CustomBrushes = new List<Brush>();
-            LinearGradientBrush gradientColor1 = new LinearGradientBrush();
-            gradientColor1.StartPoint = new Point(0.5, 0); 
-            gradientColor1.EndPoint = new Point(0.5, 1);   
-            gradientColor1.GradientStops = new GradientStopCollection()
-            {
-                new GradientStop() { Offset = 0, Color = Color.FromRgb(138, 161, 120) },
-                new GradientStop() { Offset = 1, Color = Color.FromRgb(242, 245, 240) }
-            };
-
-            LinearGradientBrush gradientColor2 = new LinearGradientBrush();
-            gradientColor2.StartPoint = new Point(0.5, 0); 
-            gradientColor2.EndPoint = new Point(0.5, 1);   
-            gradientColor2.GradientStops = new GradientStopCollection()
-            {
-                new GradientStop() { Offset = 0, Color = Color.FromRgb(90, 116, 140) },
-                new GradientStop() { Offset = 1, Color = Color.FromRgb(224, 230, 235) }
-            };
-
-            LinearGradientBrush gradientColor3 = new LinearGradientBrush();
-            gradientColor3.StartPoint = new Point(0.5, 0); 
-            gradientColor3.EndPoint = new Point(0.5, 1);   
-            gradientColor3.GradientStops = new GradientStopCollection()
-            {
-                new GradientStop() { Offset = 0, Color = Color.FromRgb(89, 89, 89) },
-                new GradientStop() { Offset = 1, Color = Color.FromRgb(230, 230, 230) }
-            };
-
-
-            LinearGradientBrush gradientColor4 = new LinearGradientBrush();
-            gradientColor4.StartPoint = new Point(0.5, 0); 
-            gradientColor4.EndPoint = new Point(0.5, 1);   
-            gradientColor4.GradientStops = new GradientStopCollection()
-            {
-                new GradientStop() { Offset = 0, Color = Color.FromRgb(222, 149, 110) },
-                new GradientStop() { Offset = 1, Color = Color.FromRgb(246, 225, 213) }
-            };
-
-            CustomBrushes.Add(gradientColor1);
-            CustomBrushes.Add(gradientColor2);
-            CustomBrushes.Add(gradientColor3);
-            CustomBrushes.Add(gradientColor4);
+            CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(138, 161, 120)));
+            CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(90, 116, 140)));
+            CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(89, 89, 89)));
+            CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(222, 149, 110)));
+            
         }
     }
 }
