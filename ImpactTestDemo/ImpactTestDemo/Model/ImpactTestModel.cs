@@ -9,14 +9,14 @@ namespace ImpactTestDemo
     public class ImpactTestModel
     {
 
-        public double Machine { get; set; }
+        public string MachineName { get; set; }
 
-        public List<double> EnergyAbsorptionValues { get; set; }
+        public List<double> AbsorbedEnergy { get; set; }
 
-        public ImpactTestModel(double machine, List<double> energyAbsorptionValues)
+        public ImpactTestModel(string machineName, List<double> absorbedEnergy)
         {
-            Machine = machine;
-            EnergyAbsorptionValues = energyAbsorptionValues;
+            MachineName = machineName;
+            AbsorbedEnergy = absorbedEnergy;
         }
     }
 }

@@ -26,7 +26,7 @@
             <chart:SfCartesianChart.XAxes>
                 <chart:CategoryAxis ShowMajorGridLines="False">
                     <chart:CategoryAxis.Title>
-                        <chart:ChartAxisTitle Text="Machine" TextColor="Black"/>
+                        <chart:ChartAxisTitle Text="Machines Name" TextColor="Black"/>
                     </chart:CategoryAxis.Title>
                     <chart:CategoryAxis.LabelStyle>
                         <chart:ChartAxisLabelStyle TextColor="Black"/>
@@ -37,7 +37,7 @@
             <chart:SfCartesianChart.YAxes>
                 <chart:NumericalAxis Interval="2" Maximum="80" ShowMajorGridLines="False">
                     <chart:NumericalAxis.Title>
-                        <chart:ChartAxisTitle Text="Energy Absorption Values"
+                        <chart:ChartAxisTitle Text="Absorbed Energy (in foot-pounds)"
                                                   TextColor="Black"/>
                     </chart:NumericalAxis.Title>
                     <chart:NumericalAxis.LabelStyle>
@@ -48,8 +48,8 @@
 
             <!--Initialize the series for chart-->
             <chart:BoxAndWhiskerSeries ItemsSource="{Binding ImpactTestResults}"
-                                       XBindingPath="Machine"
-                                       YBindingPath="EnergyAbsorptionValues"
+                                       XBindingPath="MachineName"
+                                       YBindingPath="AbsorbedEnergy"
                                        ShowMedian="True"
                                        Stroke="Black"
                                        StrokeWidth="2"
