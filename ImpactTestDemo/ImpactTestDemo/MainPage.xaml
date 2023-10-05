@@ -6,7 +6,6 @@
              x:Class="ImpactTestDemo.MainPage">
 
 
-
     <ContentPage.BindingContext>
         <model:ImpactTestViewModel/>
     </ContentPage.BindingContext>
@@ -15,12 +14,12 @@
         <chart:SfCartesianChart >
             <chart:SfCartesianChart.Title>
                 <Label Text="Creating a Box and Whisker Chart for analysis the machines impact test"
-                           HorizontalTextAlignment="Center"
-                           LineBreakMode="WordWrap"
-                           TextColor="Black" 
-                           FontSize="17"
-                           FontAttributes="Bold"
-                           Margin="10"/>
+                        HorizontalTextAlignment="Center"
+                        LineBreakMode="WordWrap"
+                        TextColor="Black" 
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        Margin="10"/>
             </chart:SfCartesianChart.Title>
 
             <chart:SfCartesianChart.XAxes>
@@ -38,7 +37,7 @@
                 <chart:NumericalAxis Interval="2" Maximum="80" ShowMajorGridLines="False">
                     <chart:NumericalAxis.Title>
                         <chart:ChartAxisTitle Text="Absorbed Energy (in foot-pounds)"
-                                                  TextColor="Black"/>
+                                               TextColor="Black"/>
                     </chart:NumericalAxis.Title>
                     <chart:NumericalAxis.LabelStyle>
                         <chart:ChartAxisLabelStyle TextColor="Black"/>
@@ -48,18 +47,17 @@
 
             <!--Initialize the series for chart-->
             <chart:BoxAndWhiskerSeries ItemsSource="{Binding ImpactTestResults}"
-                                       XBindingPath="MachineName"
-                                       YBindingPath="AbsorbedEnergy"
-                                       ShowMedian="True"
-                                       Stroke="Black"
-                                       StrokeWidth="2"
-                                       ShowDataLabels="True"
-                                       EnableTooltip="True"
-                                       EnableAnimation="True"
-                                       Opacity="0.7"
-                                       PaletteBrushes="{Binding CustomBrushes}">
+                                    XBindingPath="MachineName"
+                                    YBindingPath="AbsorbedEnergy"
+                                    ShowMedian="True"
+                                    Stroke="Black"
+                                    StrokeWidth="2"
+                                    ShowDataLabels="True"
+                                    EnableTooltip="True"
+                                    EnableAnimation="True"
+                                    Opacity="0.7"
+                                    PaletteBrushes="{Binding CustomBrushes}">
             </chart:BoxAndWhiskerSeries>
         </chart:SfCartesianChart>
-        
     </ContentPage.Content>
 </ContentPage>
