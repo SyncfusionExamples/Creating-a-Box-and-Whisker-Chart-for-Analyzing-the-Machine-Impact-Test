@@ -1,9 +1,10 @@
-﻿namespace ImpactTestDemo;
-
-public partial class AppShell : Shell
+﻿namespace ImpactTestDemo
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }
